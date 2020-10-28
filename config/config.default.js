@@ -26,7 +26,7 @@ module.exports = appInfo => {
       port: 8080,
       hostname: '0.0.0.0',
     }
-};
+  };
 
   // add your user config here
   const userConfig = {

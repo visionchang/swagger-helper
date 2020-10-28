@@ -7,13 +7,16 @@ class HomeController extends Controller {
     const { ctx } = this;
     const params = ctx.request.body;
     const { url } = params;
-    console.log(ctx)
     const res = await ctx.curl(url, { dataType: 'json' })
     ctx.body = {
       status: res.status,
       headers: res.headers,
       package: res.data
     }
+  }
+  async test() {
+    const { ctx } = this;
+    console.log(ctx.req.headers)
   }
   async index() {
     await this.ctx.render('index.html')
